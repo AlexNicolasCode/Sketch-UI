@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import { Props } from './';
+import { Props } from '.';
+import { getBorder, getBorderRadius } from './border';
 
 export const Container = styled.button<Props>`
   width: ${({ w }: Props) => w ? `${w}px` : '150px'};
@@ -15,18 +16,3 @@ export const Container = styled.button<Props>`
     height: ${({ hmd }: Props) => hmd ? `${hmd}px` : '100px'};
   }
 `;
-
-function getBorder ({ borderSize, borderColor, rounded }: Props) {
-  const size = Number(borderSize) ?? '2.5';
-
-  if (size > 0 && borderColor ) return `${borderSize}px solid ${borderColor}`
-  if (size > 0 ) return `${borderSize}px solid #f9f9f9`
-  if (rounded) return `2.5px solid #f9f9f9`
-}
-
-function getBorderRadius ({ rounded, roundedSize }: Props) {
-  const size = Number(roundedSize) ?? '2.5';
-
-  if (rounded && size > 0 ) return `${roundedSize}px`
-  if (rounded) return `2.5px`
-}
