@@ -8,18 +8,24 @@ export interface Props {
     disabled?: boolean;
     w?: string;
     h?: string;
+    wmd?: string;
+    hmd?: string;
 }
   
 const Button = ({
     children,
     w = 'default',
     h = 'default',
+    wmd = 'default',
+    hmd = 'default',
     ...props
     }: Props) => {
     return (
         <Container
             w={w}
             h={h}
+            hmd={hmd}
+            wmd={wmd}
             {...props}
         >
             {children}
