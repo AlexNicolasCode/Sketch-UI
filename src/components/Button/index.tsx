@@ -6,14 +6,22 @@ export interface Props {
     children: any;
     onClick?: () => void;
     disabled?: boolean;
+    w?: string;
+    h?: string;
 }
   
 const Button = ({
     children,
+    w = 'default',
+    h = 'default',
     ...props
     }: Props) => {
     return (
-        <Container {...props}>
+        <Container
+            w={w}
+            h={h}
+            {...props}
+        >
             {children}
         </Container>
     );
