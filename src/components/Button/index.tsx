@@ -16,12 +16,12 @@ export interface Props {
   
 const Button = ({
     children,
-    w = 'default',
-    h = 'default',
-    wmd = 'default',
-    hmd = 'default',
-    bg = 'default',
-    color = 'default',
+    w,
+    h,
+    wmd,
+    hmd,
+    bg,
+    color,
     ...props
     }: Props) => {
     return (
