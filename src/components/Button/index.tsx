@@ -12,6 +12,11 @@ export interface Props {
     hmd?: string;
     bg?: string;
     color?: string;
+    rounded?: boolean;
+    roundedSize?: string,
+    roundedColor?: string,
+    borderSize?: string,
+    borderColor?: string,
 }
   
 const Button = ({
@@ -22,6 +27,10 @@ const Button = ({
     hmd,
     bg,
     color,
+    rounded,
+    roundedSize,
+    borderSize, 
+    borderColor,
     ...props
     }: Props) => {
     return (
@@ -32,6 +41,10 @@ const Button = ({
             wmd={wmd}
             bg={bg}
             color={color}
+            rounded={rounded}
+            roundedSize={roundedSize} 
+            borderSize={borderSize}
+            borderColor={borderColor}
             {...props}
         >
             {children}
