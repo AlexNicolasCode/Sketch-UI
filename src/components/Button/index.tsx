@@ -10,6 +10,8 @@ export interface Props {
     h?: string;
     wmd?: string;
     hmd?: string;
+    bg?: string;
+    color?: string;
 }
   
 const Button = ({
@@ -18,6 +20,8 @@ const Button = ({
     h = 'default',
     wmd = 'default',
     hmd = 'default',
+    bg = 'default',
+    color = 'default',
     ...props
     }: Props) => {
     return (
@@ -26,6 +30,8 @@ const Button = ({
             h={h}
             hmd={hmd}
             wmd={wmd}
+            bg={bg}
+            color={color}
             {...props}
         >
             {children}
