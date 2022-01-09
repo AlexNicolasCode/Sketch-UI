@@ -14,7 +14,6 @@ export interface Props {
     color?: string;
     rounded?: boolean;
     roundedSize?: string,
-    roundedColor?: string,
     borderSize?: string,
     borderColor?: string,
 }
