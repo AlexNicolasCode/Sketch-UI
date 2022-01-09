@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Container } from "./styles";
+
 export interface Props {
     children: any;
     onClick?: () => void;
@@ -11,9 +13,9 @@ const Button = ({
     ...props
     }: Props) => {
     return (
-        <button {...props}>
+        <Container {...props}>
             {children}
-        </button>
+        </Container>
     );
 };
   
