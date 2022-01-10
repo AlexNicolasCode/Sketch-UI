@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 import { Props } from '.';
+import { getBackground } from './background';
 import { getBorder, getBorderRadius } from './border';
+import { getColor } from './color';
 
 export const Container = styled.button<Props>`
   width: ${({ w }: Props) => w ? `${w}px` : '150px'};
   height: ${({ h }: Props) => h ? `${h}px` : '75px'};
-  background-color: ${({ bg }: Props) => bg ? `#${bg}` : '#020202'};
-  color: ${({ color }: Props) => color ? `#${color}` : '#f9f9f9'};
+  background: ${(props: Props) => getBackground(props)};
+  color: ${(props: Props) => getColor(props)};
   border: ${(props: Props) => getBorder(props)};
   border-radius: ${(props: Props) => getBorderRadius(props)};
 

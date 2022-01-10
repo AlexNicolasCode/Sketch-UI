@@ -16,6 +16,9 @@ export interface Props {
     roundedSize?: string,
     borderSize?: string,
     borderColor?: string,
+    outline?: boolean,
+    outlineSize?: string,
+    outlineColor?: string,
 }
   
 const Button = ({
@@ -30,6 +33,9 @@ const Button = ({
     roundedSize,
     borderSize, 
     borderColor,
+    outline,
+    outlineSize,
+    outlineColor,
     ...props
     }: Props) => {
     return (
@@ -41,9 +47,12 @@ const Button = ({
             bg={bg}
             color={color}
             rounded={rounded}
-            roundedSize={roundedSize} 
+            roundedSize={roundedSize}
             borderSize={borderSize}
             borderColor={borderColor}
+            outline={outline}
+            outlineSize={outlineSize}
+            outlineColor={outlineColor}
             {...props}
         >
             {children}
