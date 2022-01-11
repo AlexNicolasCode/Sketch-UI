@@ -17,4 +17,5 @@ export type GenericProps = {
     outline?: boolean,
     outlineSize?: string,
     outlineColor?: string,
+    value?: string
 }
