@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { getBackground, getBorder, getBorderRadius, getColor } from '../../generic';
 import { GenericProps } from '../../types';
 
-export const Container = styled.button<GenericProps>`
+export const Container = styled.input<GenericProps>`
   width: ${({ w }: GenericProps) => w ? `${w}px` : '150px'};
   height: ${({ h }: GenericProps) => h ? `${h}px` : '75px'};
   background: ${(props: GenericProps) => getBackground(props)};
