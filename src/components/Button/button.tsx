@@ -7,9 +7,10 @@ const Button = (props: GenericProps) => {
     return (
         <GenericComponent
             {...props}
-            Container={Container}
-            children={"kdaskdsak"}    
-        />
+            Container={Container}   
+        >
+            {props.children}
+        </GenericComponent>
     )
 };
   
