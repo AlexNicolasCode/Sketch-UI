@@ -1,20 +1,18 @@
 import styled from 'styled-components';
 
-import { Props } from '.';
-import { getBackground } from './background';
-import { getBorder, getBorderRadius } from './border';
-import { getColor } from './color';
+import { getBackground, getBorder, getBorderRadius, getColor } from '../../generic';
+import { GenericProps } from '../../types';
 
-export const Container = styled.button<Props>`
-  width: ${({ w }: Props) => w ? `${w}px` : '150px'};
-  height: ${({ h }: Props) => h ? `${h}px` : '75px'};
-  background: ${(props: Props) => getBackground(props)};
-  color: ${(props: Props) => getColor(props)};
-  border: ${(props: Props) => getBorder(props)};
-  border-radius: ${(props: Props) => getBorderRadius(props)};
+export const Container = styled.button<GenericProps>`
+  width: ${({ w }: GenericProps) => w ? `${w}px` : '150px'};
+  height: ${({ h }: GenericProps) => h ? `${h}px` : '75px'};
+  background: ${(props: GenericProps) => getBackground(props)};
+  color: ${(props: GenericProps) => getColor(props)};
+  border: ${(props: GenericProps) => getBorder(props)};
+  border-radius: ${(props: GenericProps) => getBorderRadius(props)};
 
   @media screen and (min-width: 700px) {
-    width: ${({ wmd }: Props) => wmd ? `${wmd}px` : '200px'};
-    height: ${({ hmd }: Props) => hmd ? `${hmd}px` : '100px'};
+    width: ${({ wmd }: GenericProps) => wmd ? `${wmd}px` : '200px'};
+    height: ${({ hmd }: GenericProps) => hmd ? `${hmd}px` : '100px'};
   }
 `;
