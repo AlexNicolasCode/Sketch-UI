@@ -1,15 +1,15 @@
 import { GenericProps } from "../types"
 
-function getBackground ({ bg, outline, outlineSize }: GenericProps): string | undefined  {
+function addBackground ({ bg, outline, outlineSize }: GenericProps): string | undefined  {
     if (outline && Number(outlineSize) > 0) {
-        return 'transparent'
+        return 'background: transparent;'
     }
 
     if (outline) {
-        return 'transparent'
+        return 'background: transparent;'
     }
 
-    return bg ? `#${bg}` : '#020202'
+    return bg ? `background-color: #${bg};` : 'background-color: #020202;'
 }
 
-export { getBackground }
+export { addBackground }

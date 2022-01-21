@@ -1,4 +1,4 @@
-export type GenericProps = {
+export interface GenericProps extends Navbar, JustifyContent {
     children?: any,
     Container?: any,
     props?: any,
@@ -17,5 +17,20 @@ export type GenericProps = {
     outline?: boolean,
     outlineSize?: string,
     outlineColor?: string,
-    value?: string
+    value?: string,
+    d?: 'block' | 'inline' | 'flex' | 'grid' | 'table',
+    hidden?: boolean,
+}
+
+type Navbar = {
+    navbar?: boolean  
+}
+
+type JustifyContent = { 
+    justifyCenter?: boolean, 
+    justifyStart?: boolean, 
+    justifyEnd?: boolean,
+    justifyBetween?: boolean, 
+    justifyAround?: boolean,
+    justifyEvenly?: boolean
 }
